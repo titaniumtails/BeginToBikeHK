@@ -22,16 +22,16 @@
     <%= b.text_field :from %>
   </div>
   <div class="field">
+    <h4>From district:</h4><br>
+    <%= b.select :from_district, ["== Hong Kong Island 香港島 ==", hk_regions, "","== Kowloon 九龍  ==", kowloon_regions, "","== New Territories 新界 ==", nt_regions, "","== Lantau Island 大嶼山 ==", lantau_regions, "","== Outlying Islands 離島區 ==", out_regions] %>
+  </div>
+  <div class="field">
     <h4>Going to:</h4><br>
     <%= b.text_field :to %>
   </div>
-  <div class="field">
-    <h4>From district:</h4><br>
-    <%= b.collection_select :from_district, ["== Hong Kong Island 香港島 ==", hk_regions, "== Kowloon 九龍  ==", kowloon_regions, "== New Territories 新界 ==", nt_regions, "== Lantau Island 大嶼山 ==", lantau_regions, "== Outlying Islands 離島區 ==", out_regions] %>
-  </div>
  <div class="field">
-    <h4>Going to district:</h4><br>
-    <%= b.collection_select :to_district, ["== Hong Kong Island 香港島 ==", hk_regions, "== Kowloon 九龍  ==", kowloon_regions, "== New Territories 新界 ==", nt_regions, "== Lantau Island 大嶼山 ==", lantau_regions, "== Outlying Islands 離島區 ==", out_regions] %>
+   <h4>To district:</h4><br>
+    <%= b.select :to_district, ["== Hong Kong Island 香港島 ==", hk_regions, "","== Kowloon 九龍  ==", kowloon_regions, "","== New Territories 新界 ==", nt_regions, "","== Lantau Island 大嶼山 ==", lantau_regions, "","== Outlying Islands 離島區 ==", out_regions] %>
   </div>
   <div class="field">
     <h4>Date of your ride:</h4><br>
@@ -52,7 +52,7 @@
   <div class="field">
     <%= b.label :mtb %><br>
     <%= b.check_box :mtb %>
-    <%= b.select :mtb, [["Yes",true],["No",false]]) %>
+    <%= b.select :mtb, [["Yes",true],["No",false]] %>
 
   </div>
   <div class="field">

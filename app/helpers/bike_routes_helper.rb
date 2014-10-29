@@ -15,7 +15,7 @@ module BikeRoutesHelper
     District.where(eng_region: "Lantau Island").pluck(:eng_name, :chi_name)
   end
 
-  def out_regiouns
+  def out_regions
     District.where(eng_region: "Outlying Islands").pluck(:eng_name, :chi_name)
   end
   
