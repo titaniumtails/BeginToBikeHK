@@ -1,0 +1,93 @@
+<p id="notice"><%= notice %></p>
+
+<h4>
+  <%= @bike_route.name %> Route
+</h4>
+
+<p>
+  <strong>From:</strong>
+  <%= @bike_route.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @bike_route.to_district %>
+</p>
+
+<p>
+  <strong>From District:</strong>
+  <%= @bike_route.from_district %>
+</p>
+
+<p>
+  <strong>To District:</strong>
+  <%= @bike_route.to %>
+</p>
+
+<p>
+  <strong>Map thumb:</strong>
+  <%= @bike_route.map_thumb %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @bike_route.date %>
+</p>
+
+<p>
+  <strong>Map detail:</strong>
+  <%= @bike_route.map_detail %>
+</p>
+
+<p>
+  <strong>Warning:</strong>
+  <%= @bike_route.warning %>
+</p>
+
+<p>
+  <strong>Warning thumb:</strong>
+  <%= @bike_route.warning_thumb %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bike_route.description %>
+</p>
+
+<p>
+  <strong>Mtb:</strong>
+  <%= @bike_route.mtb %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @bike_route.distance %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @bike_route.time %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @bike_route.difficulty %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @bike_route.comments %>
+</p>
+
+<p>
+  <strong>Best tod:</strong>
+  <%= @bike_route.best_tod %>
+</p>
+
+<p>
+  <strong>Ranking:</strong>
+  <%= @bike_route.ranking %>
+</p>
+
+<%= link_to 'Edit', edit_bike_route_path(@bike_route) %> |
+<%= link_to 'Back', bike_routes_path %>

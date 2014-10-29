@@ -1,0 +1,82 @@
+<h2>Create your new route</h2>
+
+<%= form_for(@bike_route) do |b| %>
+  <% if @bike_route.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bike_route.errors.count, "error") %> We're sorry, your route can't be saved:</h2>
+
+      <ul>
+      <% @bike_route.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <h4>Your route name:</h4><br>
+    <%= b.text_field :name %>
+  </div>
+  <div class="field">
+    <h4>From:</h4><br>
+    <%= b.text_field :from %>
+  </div>
+  <div class="field">
+    <h4>Going to:</h4><br>
+    <%= b.text_field :to %>
+  </div>
+  <div class="field">
+    <h4>From district:</h4><br>
+    <%= b.collection_select :from_district, ["== Hong Kong Island 香港島 ==", hk_regions, "== Kowloon 九龍  ==", kowloon_regions, "== New Territories 新界 ==", nt_regions, "== Lantau Island 大嶼山 ==", lantau_regions, "== Outlying Islands 離島區 ==", out_regions] %>
+  </div>
+ <div class="field">
+    <h4>Going to district:</h4><br>
+    <%= b.collection_select :to_district, ["== Hong Kong Island 香港島 ==", hk_regions, "== Kowloon 九龍  ==", kowloon_regions, "== New Territories 新界 ==", nt_regions, "== Lantau Island 大嶼山 ==", lantau_regions, "== Outlying Islands 離島區 ==", out_regions] %>
+  </div>
+  <div class="field">
+    <h4>Date of your ride:</h4><br>
+    <%= b.date_field :date %>
+  </div>
+  <div class="field">
+    <%= b.label :warning %><br>
+    <%= b.text_area :warning %>
+  </div>
+  <div class="field">
+    <%= b.label :warning_thumb %><br>
+    <%= b.text_field :warning_thumb %>
+  </div>
+  <div class="field">
+    <%= b.label :description %><br>
+    <%= b.text_area :description %>
+  </div>
+  <div class="field">
+    <%= b.label :mtb %><br>
+    <%= b.check_box :mtb %>
+    <%= b.select :mtb, [["Yes",true],["No",false]]) %>
+
+  </div>
+  <div class="field">
+    <%= b.label :distance %><br>
+    <%= b.number_field :distance %>
+  </div>
+  <div class="field">
+    <%= b.label :time %><br>
+    <%= b.time_select :time %>
+  </div>
+  <div class="field">
+    <%= b.label :difficulty %><br>
+    <%= b.select :difficulty, %w(Beginner Intermediate Advanced Professional)%>
+  </div>
+  <div class="field">
+    <%= b.label :comments %><br>
+    <%= b.text_area :comments %>
+  </div>
+  <div class="field">
+    <%= b.label :best_tod %><br>
+    <%= b.text_field :best_tod %>
+  </div>
+  <div class="actions">
+    <%= b.submit %>
+  </div>
+<% end %>
+
