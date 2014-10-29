@@ -18,5 +18,31 @@ module BikeRoutesHelper
   def out_regions
     District.where(eng_region: "Outlying Islands").pluck(:eng_name, :chi_name)
   end
+
+  def districts
+    array = []
+    
+    array.push "== Hong Kong Island 香港島 =="
+    hk_regions.each {|x, y| array.push "#{x} #{y}"}
+    array.push ""
+
+    array.push "== Kowloon 九龍  =="
+    kowloon_regions.each {|x, y| array.push "#{x} #{y}"}
+    array.push ""
+
+    array.push "== New Territories 新界 ==",
+    nt_regions.each {|x, y| array.push "#{x} #{y}"}
+    array.push ""
+
+    array.push "== Lantau Island 大嶼山 ==",
+    lantau_regions.each {|x, y| array.push "#{x} #{y}"}
+    array.push ""
+
+    array.push "== Outlying Islands 離島區 ==",
+    out_regions.each {|x, y| array.push "#{x} #{y}"}
+    array.push ""
+
+    array
+  end
   
 end

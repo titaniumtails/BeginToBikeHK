@@ -9,5 +9,5 @@ class BikeRoute < ActiveRecord::Base
   validates_each :mtb do |record, attr, value|
     record.errors.add attr, 'is invalid.' if value != true && value != false
   end
-  
+                                                                                         
 end

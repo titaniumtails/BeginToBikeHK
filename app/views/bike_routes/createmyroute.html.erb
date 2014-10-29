@@ -23,7 +23,7 @@
   </div>
   <div class="field">
     <h4>From district:</h4><br>
-    <%= b.select :from_district, ["== Hong Kong Island 香港島 ==", hk_regions, "","== Kowloon 九龍  ==", kowloon_regions, "","== New Territories 新界 ==", nt_regions, "","== Lantau Island 大嶼山 ==", lantau_regions, "","== Outlying Islands 離島區 ==", out_regions] %>
+    <%= b.select :from_district, districts %>
   </div>
   <div class="field">
     <h4>Going to:</h4><br>
@@ -31,7 +31,8 @@
   </div>
  <div class="field">
    <h4>To district:</h4><br>
-    <%= b.select :to_district, ["== Hong Kong Island 香港島 ==", hk_regions, "","== Kowloon 九龍  ==", kowloon_regions, "","== New Territories 新界 ==", nt_regions, "","== Lantau Island 大嶼山 ==", lantau_regions, "","== Outlying Islands 離島區 ==", out_regions] %>
+    <%= b.select :to_district, districts %>
+
   </div>
   <div class="field">
     <h4>Date of your ride:</h4><br>
