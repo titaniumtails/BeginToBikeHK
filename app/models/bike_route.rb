@@ -1,5 +1,6 @@
 class BikeRoute < ActiveRecord::Base
-
+  belongs_to :district
+  
   # Validations
   validates :name, :from, :to, presence: true, length: { minimum: 3 }
   validates :name, uniqueness: { case_sensitive: false }
@@ -9,5 +10,5 @@ class BikeRoute < ActiveRecord::Base
   validates_each :mtb do |record, attr, value|
     record.errors.add attr, 'is invalid.' if value != true && value != false
   end
-                                                                                         
+
 end
