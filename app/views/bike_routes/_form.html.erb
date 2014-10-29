@@ -1,0 +1,93 @@
+<%= form_for(@bike_route) do |f| %>
+  <% if @bike_route.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bike_route.errors.count, "error") %> prohibited this bike_route from being saved:</h2>
+
+      <ul>
+      <% @bike_route.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br>
+    <%= f.text_field :from %>
+  </div>
+  <div class="field">
+    <%= f.label :to %><br>
+    <%= f.text_field :to %>
+  </div>
+  <div class="field">
+    <%= f.label :from_district %><br>
+    <%= f.text_field :from_district %>
+  </div>
+  <div class="field">
+    <%= f.label :to_district %><br>
+    <%= f.text_field :to_district %>
+  </div>
+  <div class="field">
+    <%= f.label :map_thumb %><br>
+    <%= f.text_field :map_thumb %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :map_detail %><br>
+    <%= f.text_area :map_detail %>
+  </div>
+  <div class="field">
+    <%= f.label :warning %><br>
+    <%= f.text_area :warning %>
+  </div>
+  <div class="field">
+    <%= f.label :warning_thumb %><br>
+    <%= f.text_field :warning_thumb %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :mtb %><br>
+    <%= f.check_box :mtb %>
+  </div>
+  <div class="field">
+    <%= f.label :distance %><br>
+    <%= f.number_field :distance %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.time_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :difficulty %><br>
+    <%= f.text_field :difficulty %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br>
+    <%= f.text_area :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :best_tod %><br>
+    <%= f.text_field :best_tod %>
+  </div>
+  <div class="field">
+    <%= f.label :user_generated %><br>
+    <%= f.check_box :user_generated %>
+  </div>
+  <div class="field">
+    <%= f.label :ranking %><br>
+    <%= f.number_field :ranking %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

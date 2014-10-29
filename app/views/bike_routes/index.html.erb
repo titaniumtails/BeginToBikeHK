@@ -1,0 +1,61 @@
+<h1>Listing bike_routes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>From</th>
+      <th>To</th>
+      <th>From district</th>
+      <th>To district</th>
+      <th>Map thumb</th>
+      <th>Date</th>
+      <th>Map detail</th>
+      <th>Warning</th>
+      <th>Warning thumb</th>
+      <th>Description</th>
+      <th>Mtb</th>
+      <th>Distance</th>
+      <th>Time</th>
+      <th>Difficulty</th>
+      <th>Comments</th>
+      <th>Best tod</th>
+      <th>User generated</th>
+      <th>Ranking</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bike_routes.each do |bike_route| %>
+      <tr>
+        <td><%= bike_route.name %></td>
+        <td><%= bike_route.from %></td>
+        <td><%= bike_route.to %></td>
+        <td><%= bike_route.from_district %></td>
+        <td><%= bike_route.to_district %></td>
+        <td><%= bike_route.map_thumb %></td>
+        <td><%= bike_route.date %></td>
+        <td><%= bike_route.map_detail %></td>
+        <td><%= bike_route.warning %></td>
+        <td><%= bike_route.warning_thumb %></td>
+        <td><%= bike_route.description %></td>
+        <td><%= bike_route.mtb %></td>
+        <td><%= bike_route.distance %></td>
+        <td><%= bike_route.time %></td>
+        <td><%= bike_route.difficulty %></td>
+        <td><%= bike_route.comments %></td>
+        <td><%= bike_route.best_tod %></td>
+        <td><%= bike_route.user_generated %></td>
+        <td><%= bike_route.ranking %></td>
+        <td><%= link_to 'Show', bike_route %></td>
+        <td><%= link_to 'Edit', edit_bike_route_path(bike_route) %></td>
+        <td><%= link_to 'Destroy', bike_route, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bike route', new_bike_route_path %>
