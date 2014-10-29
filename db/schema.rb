@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029130548) do
+ActiveRecord::Schema.define(version: 20141029132941) do
 
   create_table "bike_routes", force: true do |t|
     t.string   "name"
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 20141029130548) do
     t.string   "best_tod"
     t.boolean  "user_generated"
     t.integer  "ranking"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "districts", force: true do |t|
+    t.string   "eng_name"
+    t.string   "chi_name"
+    t.string   "eng_region"
+    t.string   "chi_region"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
