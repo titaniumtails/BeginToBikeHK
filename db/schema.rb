@@ -11,12 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029144435) do
+ActiveRecord::Schema.define(version: 20141029144956) do
 
   create_table "bike_routes", force: true do |t|
     t.string   "name"
     t.string   "from"
+    t.float    "from_lat"
+    t.float    "from_lng"
     t.string   "to"
+    t.float    "to_lat"
+    t.float    "to_lng"
     t.string   "from_district"
     t.string   "to_district"
     t.string   "map_thumb"
@@ -35,6 +39,7 @@ ActiveRecord::Schema.define(version: 20141029144435) do
     t.integer  "ranking"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "district_id"
   end
 
   create_table "districts", force: true do |t|

@@ -130,3 +130,7 @@ islands_list.each do |place|
   place.push("Outlying Islands", "離島區")
   District.create( :eng_name => place[0], :chi_name => place[1], :eng_region => place[2], :chi_region => place[3], )
 end
+
+district = District.first
+BikeRoute.create name: 'First Route', from: 'Cyberport', from_lat: 22.2608312, from_lng: 114.1308131, to: 'Central', to_lat: 22.2799907, to_lng: 114.1587982, district: district
+

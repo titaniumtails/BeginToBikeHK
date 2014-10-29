@@ -3,7 +3,11 @@ class CreateBikeRoutes < ActiveRecord::Migration
     create_table :bike_routes do |t|
       t.string :name
       t.string :from
+      t.float :from_lat
+      t.float :from_lng
       t.string :to
+      t.float :to_lat
+      t.float :to_lng
       t.string :from_district
       t.string :to_district
       t.string :map_thumb
