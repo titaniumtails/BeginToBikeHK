@@ -134,7 +134,7 @@ end
 
 BikeRoute.create(
   name:'Sha Tin to Tai Po',
-  from:'Sha Tin Central Park, outside New Town Plaza'
+  from:'Sha Tin Central Park, outside New Town Plaza',
   from_lng:'114.189988',
   from_lat:'22.379681', 
   from_district:'Sha Tin',
@@ -143,19 +143,19 @@ BikeRoute.create(
   to_lat:'22.451276', 
   to_district: 'Tai Po',
   difficulty:'Beginner',
-  distance: '16000'
-  date: '2014-05-15',
-  best_tod: '8 AM - 11AM',
+  distance:'16000',
+  date:'2014-05-15',
+  best_tod:'8 AM - 11AM',
   mtb: false,
-  comments: 'Near the end of the Pak Shek Kok Promenade there is an open-air café providing simple meals and drinks.',
+  comments:'Near the end of the Pak Shek Kok Promenade there is an open-air café providing simple meals and drinks.',
   user_generated: true,
-  warning: 'This route is quite busy with pedestrians on the weekends. It is recommended to go early in the mornings or on weekdays.',
+  warning:'This route is quite busy with pedestrians on the weekends. It is recommended to go early in the mornings or on weekdays.',
   description: 'This route passes beautiful mountain and coastal scenery in the New Territories and includes the Tolo Harbour Cycling Track -- the most picturesque cycling route in Hong Kong',
   ranking: 4
 )
 BikeRoute.create(
   name:'Tai Po to Tai Mei Tuk (Plover Clove Reservoir)',
-  from:'Tai Po Waterfront Park'
+  from:'Tai Po Waterfront Park',
   from_lng:'114.17902865',
   from_lat:'22.45244597', 
   from_district:'Tai Po',
@@ -164,13 +164,13 @@ BikeRoute.create(
   to_lat:'22.455167', 
   to_district:'Tai Po',
   difficulty:'Beginner',
-  distance: '9000'
-  date: '2014-05-30',
-  best_tod: 'Before 12PM or after 4PM',
+  distance:'9000',
+  date:'2014-05-30',
+  best_tod:'Before 12PM or after 4PM',
   mtb: false,
-  comments: 'It isn’t until near Tai Mei Tuk that simple food stores and eateries are available. Stock up with food and water in Tai Po if necessary. Near Plover Cove there is a village of Thai restaurants, which can be a great end to your ride.',
+  comments:'It isn’t until near Tai Mei Tuk that simple food stores and eateries are available. Stock up with food and water in Tai Po if necessary. Near Plover Cove there is a village of Thai restaurants, which can be a great end to your ride.',
   user_generated: true,
-  warning: 'Be careful of cars along this ride, and tends to get crowded on the weekends.',
+  warning:'Be careful of cars along this ride, and tends to get crowded on the weekends.',
   description: 'Here you will enjoy a cool ride on a huge dam with views of Tolo Harbour and Plover Cove. Tai Mei Tuk is a popular escape for urban dwellers. Ride along Yuen Sin Road across local villages and sites. At Tai Mei Tuk or Plover Cove Reservoir Dam, enjoy barbeques, water sports and kite flying. go up a slope onto the main dam of Plover Clove Reservoir. You can cycle across the dam and back for a view of the magnificent vast blue waters.',
   ranking: 3
 )
@@ -185,7 +185,7 @@ BikeRoute.create(
   to_lat:'22.455167', 
   to_district:'Tai Po',
   difficulty:'Intermediate',
-  distance: '25000'
+  distance: '25000',
   date: '2014-06-5',
   best_tod: 'Before 12PM or after 4PM',
   mtb: false,
@@ -200,13 +200,13 @@ BikeRoute.create(
   from:'Mui Wo',
   from_lng:'114.001026',
   from_lat:'22.263940', 
-  from_district:'Mui Wo'
+  from_district:'Mui Wo',
   to:'Cheung Sha Beach',
   to_lng:'113.946127',
   to_lat:'22.232946', 
   to_district:'Lantau',
   difficulty:'Advanced',
-  distance: '8400'
+  distance: '8400',
   date: '2014-04-5',
   mtb: false,
   comments: 'Be sure to bring along your snacks and water, which you can buy from Park\'n\'shop at the start of the ride. There won\'t be anything available at the beach at the end of your ride.',
@@ -221,13 +221,12 @@ BikeRoute.create(
   from_lng:'113.941267',
   from_lat:'22.289250', 
   from_district:'Tung Chung',
-
   to:'Inspiration Lake, Hong Kong Disneyland',
   to_lng:'114.037452',
   to_lat:'22.319695', 
   to_district:'Disneyland',
   difficulty:'Intermediate',
-  distance: '15000'
+  distance: '15000',
   date: '2014-04-5',
   mtb: false,
   comments: 'At Inspiration Lake there is a small 7-11 to buy snacks, and it would be good to bring your bike lock & chain, to be able to make use of the snack bar facilities, a boat ride on the lake, before cycling back to Tung Chung.',
@@ -247,7 +246,7 @@ BikeRoute.create(
   to_lat:'22.208589', 
   to_district:'Cheung Chau',
   difficulty:'Intermediate',
-  distance: '12700'
+  distance: '12700',
   date: '2014-04-5',
   mtb: false,
   comments: 'The harbourfront can be crowded with residents riding bicycles and tourists being driven by cycle rickshaws, but by bike you can speedily make it to the calmer parts of the island to see the villages, temples, cemeteries, beaches and coastal views. There are steep hills and some steps involved in doing a circuit of the island, so don\'t\ hire a tricycle if you intend to do the circuit.',
@@ -268,7 +267,7 @@ BikeRoute.create(
   to_lat:'22.446372', 
   to_district:'Yeun Long',
   difficulty:'Intermediate',
-  distance: '25200'
+  distance: '25200',
   date: '2014-04-5',
   mtb: true,
   comments: 'This area is excellent for bird watching.',

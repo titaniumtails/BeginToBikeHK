@@ -14,12 +14,3 @@
  *= require_self
  */
 
-#map {
-  width:800px;
-  height: 400px;
-}
-
-#smallmap {
-  width:400px;
-  height: 200px;
-}

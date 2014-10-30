@@ -1,3 +1,86 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//
+* {
+  border: 1px solid grey;
+}
+
+
+// LETS'S TALK ABOUT FONTS
+
+
+body { 
+  padding-top: 70px; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff
+}
+
+
+
+// THE NAV BAR
+
+.navbar{
+  padding: 1.5em;
+}
+.navcolor {
+  background-color: #15A8BF;
+}
+
+
+// MY BUTTON STYLES
+
+// MY NAV BAR BUTTON STYLES
+
+.top-button {
+  background-color: #15A8BF;
+  border: 1px solid rgb(230, 230, 230);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 6px;
+}
+.signup{
+  padding: 10px 15px;
+}
+
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: rgb(230, 230, 230)
+}
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active {
+  color: #fff;
+  background-color: #15A8BF;
+  border-color: #15A8BF
+}
+
+.btn-outline-inverse:hover, .btn-outline-inverse:focus, .btn-outline-inverse:active {
+  color: #15A8BF;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff
+}
+
+.big-ol-button {
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+
+#map {
+  width:800px;
+  height: 400px;
+}
+
+#smallmap {
+  width:400px;
+  height: 200px;
+}
