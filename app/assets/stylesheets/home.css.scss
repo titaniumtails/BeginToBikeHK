@@ -6,22 +6,22 @@
 
 
 body {
-  padding-top: 110px;
+  padding-top: 90px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 1.42857143;
-  color: #333;
   background-color: #fff
 }
 
-// THE NAV BAR
-
-.navbar{
-  padding: 1.5em;
+h2 {
+  font-size: 28px;
+  color: #f35626;
+  text-align: center;
 }
-.navcolor {
-  background-color: #15A8BF;
+
+#pass {
+  font-size: 15px;
 }
 
 
@@ -30,34 +30,35 @@ body {
 // MY NAV BAR BUTTON STYLES
 
 .top-button {
-  background-color: #15A8BF;
-  border: 1px solid rgb(230, 230, 230);
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  border-radius: 6px;
-}
-.signup{
-  padding: 10px 15px;
-}
-
-.btn-outline-inverse {
-  color: #fff;
+  color: #f35626;
   background-color: transparent;
-  border-color: rgb(230, 230, 230)
+  border: 2px solid #f35626;
+  border-radius: 6px;
+  font-size: 1.2em;
+  line-height: 1.375;
+  margin: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-animation: hue 60s infinite linear;
 }
 
-.btn-outline:hover, .btn-outline:focus, .btn-outline:active {
+.long-button {
+  width: 290px;
+}
+
+.signup {
+  padding: 10px 13px;
+}
+
+.top-button:hover, .top-button:focus, .top-button:active {
   color: #fff;
-  background-color: #15A8BF;
-  border-color: #15A8BF
-}
-
-.btn-outline-inverse:hover, .btn-outline-inverse:focus, .btn-outline-inverse:active {
-  color: #15A8BF;
+  text-decoration: none;
   text-shadow: none;
-  background-color: #fff;
-  border-color: #fff
+  background-color: #f35626;
+  border-color: #f35626;
+  -webkit-animation: hue 60s infinite linear;
 }
 
 .big-ol-button {
@@ -67,6 +68,37 @@ body {
   border-radius: 6px;
 }
 
+.inverse-button {
+  color: #fff;
+  background-color: #f35626;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  font-size: 1.2em;
+  line-height: 1.375;
+  margin: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+.inverse-button:hover, .inverse-button:focus, .inverse-button:active {
+  color: #f35626;
+  text-decoration: none;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #f35626;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+// FORMS
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
 
 #map {
   width:800px;
@@ -76,4 +108,11 @@ body {
 #smallmap {
   width:400px;
   height: 200px;
+}
+
+.checkboxwords {
+  color: grey;
+  font-size: 18px;
+  font-weight: 200;
+  padding: 10px;
 }

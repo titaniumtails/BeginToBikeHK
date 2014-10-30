@@ -1,10 +1,13 @@
   <!-- Main jumbotron the different kind of biking  -->
-  <div class="jumbotron">
-    <div class="container">
+  <div class="middle">
+    <%= link_to root_path do
+      image_tag 'bike-background.jpg', width: '100%';
+    end %>
+    <div class="container-fluid">
       <h1>Hello, world!</h1>
       <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
       <p>
-        <%= link_to "Sign Up »", new_user_registration_path, class: "btn btn-primary btn-lg", role: "button" %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "inverse-button", role: "button" %>
       </p>
     </div>
   </div>

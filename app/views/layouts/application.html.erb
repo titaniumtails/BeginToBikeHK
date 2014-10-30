@@ -4,38 +4,38 @@
   <title>BeginToBikeHK</title>
 
   <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+  <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' %>
+  <%= stylesheet_link_tag '/animate.css' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
 
 <body>
-  <nav class="navbar navbar-fixed-top navcolor" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar">Test</span>
-      </button>
-      <%= link_to 'Home', root_path, class: 'navbar-brand'  %>
-      <%= link_to "Tips", tips_path, class: "btn btn-outline-inverse top-button navbar-left" %>
+  <nav class="navbar navbar-default navbar-fixed-top navcolor" role="navigation">
+    <div class="fluid-container">
+      <%= link_to root_path, class: 'navbar-left' do
+        image_tag 'BikeHKtight.png', id:'bikelogo' 
+      end %>
+      <div id="coggie1">
+        <i class="fa fa-cog fa-spin"></i>
+      </div>
+      <div id="coggie2">
+        <i class="fa fa-cog fa-spin"></i>
+      </div>
+      <%= link_to "Tips", tips_path, class: "navbar-left menuthings" %>
+        <% if user_signed_in? %>
+          <%= link_to "Log Out",  destroy_user_session_path, :method => :delete,  class: "btn btn-outline top-button" %>
+        <% else %>
+          <%= link_to "Log In",  new_user_session_path,      class: "navbar-right top-button" %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "navbar-right top-button signup" %>
+        <% end %>
     </div>
-
-    <div id="navbar" class="navbar-collapse collapse navbar-right ">
-      <% if user_signed_in? %>
-        <%= link_to "Log Out",  destroy_user_session_path, :method => :delete,  class: "btn btn-outline-inverse top-button" %>
-      <% else %>
-        <%= link_to "Log In",  new_user_session_path,      class: "btn btn-outline-inverse top-button" %>
-        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-outline-inverse top-button signup" %>
-      <% end %>
-    </div>
-
   </nav>
 
-  <div class="container-fluid">
     <% if flash[:notice] %> <div class="alert alert-success" role="alert"><%= flash[:notice] %></div> <% end %>
     <% if flash[:alert]  %> <div class="alert alert-danger" role="alert"> <%= flash[:alert] %></div>  <% end %>
 
     <%= yield %>
-  </div>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
