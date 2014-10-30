@@ -16,15 +16,16 @@
         <span class="icon-bar">Test</span>
       </button>
       <%= link_to 'Home', root_path, class: 'navbar-brand'  %>
+      <%= link_to "Tips", tips_path, class: "btn btn-outline-inverse top-button navbar-left" %>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse navbar-right ">
-    <% if user_signed_in? %>
-      <%= link_to "Log Out",  destroy_user_session_path, :method => :delete,  class: "btn btn-outline-inverse top-button" %>
-    <% else %>
-      <%= link_to "Log In",  new_user_session_path,      class: "btn btn-outline-inverse top-button" %>
-      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-outline-inverse top-button signup" %>
-    <% end %>
+      <% if user_signed_in? %>
+        <%= link_to "Log Out",  destroy_user_session_path, :method => :delete,  class: "btn btn-outline-inverse top-button" %>
+      <% else %>
+        <%= link_to "Log In",  new_user_session_path,      class: "btn btn-outline-inverse top-button" %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-outline-inverse top-button signup" %>
+      <% end %>
     </div>
 
   </nav>

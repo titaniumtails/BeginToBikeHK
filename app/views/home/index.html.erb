@@ -12,3 +12,14 @@
   <div class="container">
     <div id="map"></div>
   </div>
+
+  <div class="container">
+    <h1> Bike Routes</h1>
+    <% @bikeRoutes.each do |bike_route| %>
+      <div>
+         <%= link_to bike_route.name, bike_route %> |
+         <%= bike_route.from %> |
+         <%= bike_route.to %>
+      </div>
+    <% end %>
+  </div>

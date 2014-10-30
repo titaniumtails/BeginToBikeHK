@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
 
   def index
+    @bikeRoutes = BikeRoute.all
   end
 
-  def more
+  def tips
   end
-
 end
