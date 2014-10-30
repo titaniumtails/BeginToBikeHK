@@ -31,7 +31,7 @@
   request =
     origin: origin
     destination: destination
-    travelMode: google.maps.TravelMode.DRIVING
+    travelMode: google.maps.TravelMode.WALKING
 
   directionsService.route request, (response, status) ->
     if (status is google.maps.DirectionsStatus.OK)

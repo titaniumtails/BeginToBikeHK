@@ -16,20 +16,36 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :from %><br>
+    <h4>From:</h4><br>
     <%= f.text_field :from %>
   </div>
   <div class="field">
-    <%= f.label :to %><br>
+    <h4>From Lat:</h4><br>
+    <%= f.text_field :from_lat %>
+  </div>
+  <div class="field">
+    <h4>From Long:</h4><br>
+    <%= f.text_field :from_lng %>
+  </div>
+  <div class="field">
+    <h4>From district:</h4><br>
+    <%= f.select :from_district, alldistricts %>
+  </div>
+  <div class="field">
+    <h4>Going to:</h4><br>
     <%= f.text_field :to %>
   </div>
   <div class="field">
-    <%= f.label :from_district %><br>
-    <%= f.text_field :from_district %>
+    <h4>To Lat:</h4><br>
+    <%= f.text_field :to_lat %>
   </div>
   <div class="field">
-    <%= f.label :to_district %><br>
-    <%= f.text_field :to_district %>
+    <h4>To Long:</h4><br>
+    <%= f.text_field :to_lng %>
+  </div>
+ <div class="field">
+   <h4>To district:</h4><br>
+    <%= f.select :to_district, alldistricts %>
   </div>
   <div class="field">
     <%= f.label :map_thumb %><br>
@@ -57,7 +73,7 @@
   </div>
   <div class="field">
     <%= f.label :mtb %><br>
-    <%= f.check_box :mtb %>
+    <%= f.select :mtb, [["Yes",true],["No",false]] %>
   </div>
   <div class="field">
     <%= f.label :distance %><br>

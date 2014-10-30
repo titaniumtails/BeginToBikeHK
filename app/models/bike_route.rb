@@ -1,8 +1,18 @@
 class BikeRoute < ActiveRecord::Base
   belongs_to :district
   
-  # geocoded_by :from, :latitude  => :lat, :longitude => :lng   # can also be an IP address
-  # after_validation :geocode          # auto-fetch coordinates
+  geocoded_by :from, :latitude  => :from_lat, :longitude => :from_lng   # can also be an IP address
+  geocoded_by :to, :latitude  => :to_lat, :longitude => :to_lng
+  after_validation :geocode          # auto-fetch coordinates
+
+  # def geocoder_lookup
+  #   if :from
+  #     :esri
+  #   else
+  #     :google
+  # end
+
+
 
 
   # Validations

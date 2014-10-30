@@ -19,7 +19,7 @@ module BikeRoutesHelper
     District.where(eng_region: "Outlying Islands").pluck(:eng_name, :chi_name)
   end
 
-  def districts
+  def alldistricts
     array = []
     
     array.push "== Hong Kong Island 香港島 =="

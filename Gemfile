@@ -12,8 +12,6 @@ gem 'geocoder'
 # Frontend JavaScript library used by Google Map Utilities
 gem 'underscore-rails'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,6 +37,9 @@ gem 'devise'
 gem 'carrierwave'
 
 group :development do
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'      
@@ -72,6 +73,14 @@ group :development, :test do
   gem 'capybara', '~> 2.3.0'
 
 end
+
+group :production do
+  
+  # Use pg as the database for Active Record
+  gem 'pg'
+
+end
+
 
 
 # Use ActiveModel has_secure_password

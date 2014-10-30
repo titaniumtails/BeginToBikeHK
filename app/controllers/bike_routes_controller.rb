@@ -10,26 +10,35 @@ class BikeRoutesController < ApplicationController
   # GET /bike_routes/1
   # GET /bike_routes/1.json
   def show
-    if params[:admin] == "true"
+    # if params[:admin] == "true"
 
-    else 
-      render 'routedetail'
-    end 
+    # else 
+    #   render 'routedetail'
+    # end 
   end
 
   # GET /bike_routes/new
-  def new
-    if params[:admin] == "true"
-      @bike_route = BikeRoute.new
+  # def new
+  #   if params[:admin] == "true"
+  #     @bike_route = BikeRoute.new
 
-    else
-      @bike_route = BikeRoute.new
-      render 'createmyroute'
-    end
+  #   else
+  #     @bike_route = BikeRoute.new
+  #     render 'createmyroute'
+  #   end
+  # end
+
+  def new
+    @bike_route = BikeRoute.new
   end
 
   # GET /bike_routes/1/edit
   def edit
+    # if params[:admin] == "true"
+
+    # else 
+    #   render '_createmyroute'
+    # end
   end
 
   # POST /bike_routes

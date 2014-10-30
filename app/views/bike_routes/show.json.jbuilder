@@ -1,1 +1,1 @@
-json.extract! @bike_route, :id, :name, :from, :to, :from_district, :to_district, :map_thumb, :date, :map_detail, :warning, :warning_thumb, :description, :mtb, :distance, :time, :difficulty, :comments, :best_tod, :user_generated, :ranking, :created_at, :updated_at
+json.extract! @bike_route, :id, :name, :from, :to, :from_lat, :from_lng, :from_district, :to_district, to_lat,:map_thumb, :date, :map_detail, :warning, :warning_thumb, :description, :mtb, :distance, :time, :difficulty, :comments, :best_tod, :user_generated, :ranking, :created_at, :updated_at
