@@ -1,21 +1,18 @@
-<div class ="futurediv">
+<div class ="container bounceInUp">
+  <h2 class="form-signin heading">Log in</h2>
+  <form class="form-signin" role="form">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <div class ="container bounceInUp">
-    <h2 class="form-signin heading">Log in</h2>
-    <form class="form-signin" role="form">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  
-    <%= f.email_field :email, autofocus: true, class: 'form-control input-lg', placeholder: 'Your email address' %>
+  <%= f.email_field :email, autofocus: true, class: 'form-control input-lg', placeholder: 'Your email address' %>
+  <br />
+  <%= f.password_field :password, autocomplete: "off", class: 'form-control input-lg', placeholder: 'Your password' %>
+     <% if devise_mapping.rememberable? -%>
+      <%= f.check_box :remember_me %> <%= f.label :remember_me, class: "checkboxwords" %>
+     <% end -%>
+
     <br />
-    <%= f.password_field :password, autocomplete: "off", class: 'form-control input-lg', placeholder: 'Your password' %>
-       <% if devise_mapping.rememberable? -%>
-        <%= f.check_box :remember_me %> <%= f.label :remember_me, class: "checkboxwords" %>
-       <% end -%>
+    <div><%= f.submit "Log in", class: 'top-button long-button' %></div>
+  </form>
 
-      <br />
-      <div><%= f.submit "Log in", class: 'top-button long-button' %></div>
-    </form>
-
-  <% end %>
-  </div>
+<% end %>
 </div>

@@ -2,8 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
+//
 // LETS'S TALK ABOUT FONTS
 
+@font-face {
+font-family: "Back to the future 2002";
+src: url('fonts/BTTF.ttf') format('truetype');
+}
+
+// AND STYLING TEXT
 
 body {
   padding-top: 90px;
@@ -20,13 +27,76 @@ h2 {
   text-align: center;
 }
 
+.checkboxwords {
+  color: grey;
+  font-size: 18px;
+  font-weight: 200;
+  padding: 10px;
+}
+
 #pass {
   font-size: 15px;
 }
 
+#futurefont1 {
+  background: -webkit-linear-gradient( #f35626, #fcf005);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #f35626; /* Old browsers */
+  font-family: "Back to the future 2002", Helvetica, sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+#futurefont2 {
+  background: -webkit-linear-gradient( #fcf005, #f35626);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #f35626; /* Old browsers */
+  font-family: "Back to the future 2002", Helvetica, sans-serif;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+
+// BACKGROUND IMAGES
+.futurediv {
+  background: url(/assets/future.jpg) no-repeat;
+  height: auto;
+  width: auto;
+  padding-top:50px;
+}
+
+
+// BOXES GOTTA BE ON TOP SOMETIMES
+
+.formboxy {
+  background-color: #000;
+  border-radius: 8px;  
+  max-width: 340px;
+}
+
+// FORMS
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+// MAH MAP DON'T WORK
+
+#map {
+  width:800px;
+  height: 400px;
+}
+
+#smallmap {
+  width:400px;
+  height: 200px;
+}
+
 
 // MY BUTTON STYLES
-
 // MY NAV BAR BUTTON STYLES
 
 .top-button {
@@ -45,7 +115,9 @@ h2 {
 }
 
 .long-button {
-  width: 290px;
+  border: 3px solid #f35626;
+  background-color: #fff;
+  width: 280px;
 }
 
 .signup {
@@ -90,29 +162,4 @@ h2 {
   background-color: #fff;
   border-color: #f35626;
   -webkit-animation: hue 60s infinite linear;
-}
-
-// FORMS
-
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
-
-#map {
-  width:800px;
-  height: 400px;
-}
-
-#smallmap {
-  width:400px;
-  height: 200px;
-}
-
-.checkboxwords {
-  color: grey;
-  font-size: 18px;
-  font-weight: 200;
-  padding: 10px;
 }
