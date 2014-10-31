@@ -6,27 +6,91 @@
 // LETS'S TALK ABOUT FONTS
 
 @font-face {
-font-family: "Back to the future 2002";
-src: url('fonts/BTTF.ttf') format('truetype');
+  font-family: "Back to the future 2002";
+  src: url('fonts/BTTF.ttf') format('truetype');
+}
+@font-face {
+  font-family: "BIKES";
+  src: url('fonts/BIKES.otf') format('opentype');
 }
 
 // AND STYLING TEXT
 
 body {
   padding-top: 90px;
+  font-color: #2B547E;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.42857143;
-  background-color: #fff
+  background-color: #fff;
 }
+span.logo1small {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  text-align: center;
+  background: -webkit-linear-gradient( 45deg, #f35626 80%, #fcf005 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+span.logo2small {
+  font-size: 2rem;
+  font-style: oblique;
+  font-weight: 100;
+  letter-spacing: -0.08em;
+  text-align: center;
+  background: -webkit-linear-gradient( 45deg, #f35626 80%, #fcf005 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+h1 {
+  font-size: 9rem;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  opacity: 0.85;
+  text-align: center;
+  background: -webkit-linear-gradient( 45deg, #f35626 40%, #fcf005 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 h2 {
   font-size: 28px;
   color: #f35626;
   text-align: center;
 }
+h3 {
+  font-size: 28px;
+  color: #fff;
+  text-align: right;
+}
+.intro {
+  margin: 30px;
+  height: 508px;
+  padding: 30px;
+}
+.intro p {
+  color: #fff;
+  font-size: 20px;
+  text-align: right;
+  line-height: 1.2;
 
+}
+.intro h1 {
+  color: #fff;
+  font-color: white;
+  font-family: "BIKES", Helvetica, sans-serif;
+  font-size: 200px;
+  text-align: center;
+  background: -webkit-linear-gradient( 45deg, #fff 40%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.8;
+}
 .checkboxwords {
   color: grey;
   font-size: 18px;
@@ -61,18 +125,37 @@ h2 {
 // BACKGROUND IMAGES
 .futurediv {
   background: url(/assets/future.jpg) no-repeat;
-  height: auto;
+  padding-top:150px;
+  position: center;
+}
+
+.bikebeautiful {
+  background: url(/assets/bike-background.jpg) no-repeat;
+  height: 1000px;
   width: auto;
-  padding-top:50px;
+}
+.middle {
+  background: url(/assets/bike-background.jpg) no-repeat;
 }
 
 
 // BOXES GOTTA BE ON TOP SOMETIMES
 
+.blankarea {
+  background-color: transparent;
+  display: block;
+  padding: 500px;
+}
 .formboxy {
   background-color: #000;
   border-radius: 8px;  
   max-width: 340px;
+}
+.formboxy-inverse {
+  background-color: #fff;
+  border-radius: 8px;  
+  max-width: 340px;
+  opacity: 0.8;
 }
 
 // FORMS
@@ -162,4 +245,42 @@ h2 {
   background-color: #fff;
   border-color: #f35626;
   -webkit-animation: hue 60s infinite linear;
+}
+
+// TABLE
+table a {
+  text-decoration: none;
+  color: #2B547E;
+}
+table a:hover {
+  text-decoration: none;
+  color: red;
+}
+th {
+  color: #2B547E;
+  font-size:18px;
+  padding: 1.5em;
+}
+span.ranking {
+  // background-color: orange;
+  font-color: #f0;
+  font-size: 18px;
+  // border: 1px solid orange;
+  // border-radius: 1000px;
+  padding: 0.8em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-decoration: none;
+}
+
+tr {
+  font-size: 25px;
+  font-weight: 200;
+  padding: 2.5em;
+  text-decoration: none;
+}
+td.tablestyle{
+  vertical-align: center;
+  font-size: 18px;
+  padding: 2em;
 }

@@ -16,15 +16,11 @@
       <%= link_to root_path, class: 'navbar-left' do
         image_tag 'BikeHKtight.png', id:'bikelogo' 
       end %>
-      <div id="coggie1">
-        <i class="fa fa-cog fa-spin"></i>
-      </div>
-      <div id="coggie2">
-        <i class="fa fa-cog fa-spin"></i>
-      </div>
+      <div id="coggie1"><i class="fa fa-cog fa-spin"></i></div>
+      <div id="coggie2"><i class="fa fa-cog fa-spin"></i></div>
       <%= link_to "Tips", tips_path, class: "navbar-left menuthings" %>
         <% if user_signed_in? %>
-          <%= link_to "Log Out",  destroy_user_session_path, :method => :delete,  class: "btn btn-outline top-button" %>
+          <%= link_to "Log Out",  destroy_user_session_path, :method => :delete,  class: "navbar-right top-button" %>
         <% else %>
           <%= link_to "Log In",  new_user_session_path,      class: "navbar-right top-button" %>
           <%= link_to "Sign Up", new_user_registration_path, class: "navbar-right top-button signup" %>
@@ -42,11 +38,12 @@
   <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' %>
   <%= javascript_include_tag '//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry' %>
   <%= javascript_include_tag '//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' %>
+  <%= javascript_include_tag 'kerning.js' %>
   <br />
   <br />
   <br />
   <footer>
-    <p>© Company 2014</p>
+    <p><span class="logo2small">© </span><span class="logo1small">Bike </span><span class="logo2small">HK &nbsp;</span></p>
   </footer>
 
 </body>

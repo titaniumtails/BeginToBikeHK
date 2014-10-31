@@ -1,5 +1,7 @@
 class BikeRoute < ActiveRecord::Base
   belongs_to :district
+  # belongs_to :users
+  # has_many :comments 
   
   # geocoded_by :from, :latitude  => :from_lat, :longitude => :from_lng   # can also be an IP address
   # geocoded_by :to, :latitude  => :to_lat, :longitude => :to_lng

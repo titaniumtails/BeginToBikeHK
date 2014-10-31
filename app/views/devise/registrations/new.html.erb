@@ -1,5 +1,5 @@
 <div class ="futurediv">
-  <div class ="container bounceInUp formboxy">
+  <div class ="container animated bounceInUp formboxy">
     <h2 class="form-signin heading">Sign up</h2>
     <form class="form-signin" role="form">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -16,6 +16,8 @@
       <br />
       <div><%= f.submit "Sign up", class: 'top-button long-button' %></div>
       <% end %>
+      <% if flash[:notice] %> <div class="alert alert-success" role="alert"><%= flash[:notice] %></div> <% end %>
+      <% if flash[:alert]  %> <div class="alert alert-danger" role="alert"> <%= flash[:alert] %></div>  <% end %>
       <P></P>
       <p></p>
     </form>

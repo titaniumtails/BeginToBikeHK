@@ -1,28 +1,48 @@
   <!-- Main jumbotron the different kind of biking  -->
   <div class="middle">
-    <%= link_to root_path do
-      image_tag 'bike-background.jpg', width: '100%';
-    end %>
-    <div class="container-fluid">
-      <h1>Hello, world!</h1>
+    <div class="container-fluid intro">
+      <h3>Hello, world!</h3>
       <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p>
-        <%= link_to "Sign Up", new_user_registration_path, class: "inverse-button", role: "button" %>
+      <p>&nbsp;</p>
+      <h1>t</h1>
+      <p>&nbsp;</p>
+        <center>
+        <%= link_to "Find", new_user_registration_path, class: "inverse-button", role: "button" %>
+        <%= link_to "Create", new_bike_route_path, class: "inverse-button", role: "button" %>
+        </center>
       </p>
     </div>
   </div>
 
   <div class="container">
-    <div id="map"></div>
+    <center><div id="map"></div></center>
   </div>
 
-  <div class="container">
-    <h1> Bike Routes</h1>
-    <% @bikeRoutes.each do |bike_route| %>
-      <div>
-         <%= link_to bike_route.name, bike_route %> |
-         <%= bike_route.from %> |
-         <%= bike_route.to %>
+  <div class="container-fluid">
+    <h1>Top Bike Routes</h1>
+    <table class ="table table-striped">
+      <tbody class="mytable">
+      <tr>
+        <th>Top Rides</th> 
+        <th>Route Name</th>
+        <th>Going from</th>
+        <th>Going to</th>
+        <th>Difficulty Level</th>
+      </tr>
+      <div class="hover">
+      <tr>
+        <% @bikeRoutes.each do |f| %>
+        <td><span class="ranking"><%= f.ranking %></span></td>
+        <td class="tablestyle"><%= link_to f.name, f %></td>
+        <td class="tablestyle"><%= link_to f.from %></td>
+        <td class="tablestyle"><%= link_to f.to %></td>
+        <td class="tablestyle"><%= link_to f.difficulty %></td>
+      </tr>
       </div>
-    <% end %>
+
+        <% end %>
+
+       </tbody>
+    </table>
   </div>
+</div>
