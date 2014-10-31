@@ -7,7 +7,7 @@
       <h1>t</h1>
       <p>&nbsp;</p>
         <center>
-        <%= link_to "Find", new_user_registration_path, class: "inverse-button", role: "button" %>
+        <%= link_to "Find", "#ranking", class: "inverse-button", role: "button" %>
         <%= link_to "Create", new_bike_route_path, class: "inverse-button", role: "button" %>
         </center>
       </p>
@@ -31,12 +31,12 @@
       </tr>
       <div class="hover">
       <tr>
-        <% @bikeRoutes.each do |f| %>
+        <% @routeRank.each do |f| %>
         <td><span class="ranking"><%= f.ranking %></span></td>
         <td class="tablestyle"><%= link_to f.name, f %></td>
-        <td class="tablestyle"><%= link_to f.from %></td>
-        <td class="tablestyle"><%= link_to f.to %></td>
-        <td class="tablestyle"><%= link_to f.difficulty %></td>
+        <td class="tablestyle"><%= link_to f.from, f %></td>
+        <td class="tablestyle"><%= link_to f.to, f %></td>
+        <td class="tablestyle"><%= link_to f.difficulty, f %></td>
       </tr>
       </div>
 
